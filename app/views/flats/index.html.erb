@@ -1,0 +1,14 @@
+<div class="container d-flex justify-content-between" id="navbar">
+  <h1>AirBnB Flats :)</h1>
+  <a><%= link_to 'Add new flat', new_flat_path(@flat) %></a>
+</div>
+
+<div class="container d-flex flex-row">
+  <% @flats.each do |flat| %>
+    <div class="container" id="card">
+      <h3><%= link_to flat.name, flat_path(flat) %></h3>
+      <p><%="Address: #{flat.address}"%></p>
+      <p><%="Description: #{flat.description}"%></p>
+    </div>
+  <% end %>
+</div>

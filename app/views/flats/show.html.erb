@@ -1,0 +1,6 @@
+<h1><%= @flat.name %></h1>
+<p><%= "Address:#{@flat.address}"%></p>
+<p><%= "Price per night:#{@flat.price_per_night}" %></p>
+<p><%= "Description:#{@flat.description}, Max number of guests allowed:#{@flat.number_of_guests}" %></p>
+<p><%= link_to 'All flats', flats_path %> | <%= link_to 'Edit', edit_flat_path(@flat) %> | <%= link_to 'Delete', flat_path(@flat), method: :delete, data: {:confirm => "R u sure though?" } %></p>
+
